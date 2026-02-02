@@ -1,12 +1,12 @@
 ## Project Title
 
-GBDA302 Week 3 Example 1: Instructions Screen with Back button
+Sidequest Week 3
 
 ---
 
 ## Authors
 
-Karen Cochrane and David Han
+Allison Kalist
 
 ---
 
