@@ -17,7 +17,7 @@ const gameBtn = {
   y: 550, // y position (centre of the button)
   w: 260, // width
   h: 90, // height
-  label: "PRESS HERE", // text shown on the button
+  label: "Press to Begin", // text shown on the button
 };
 
 // ------------------------------

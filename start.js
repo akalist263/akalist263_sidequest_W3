@@ -32,14 +32,6 @@ function drawStart() {
     label: "START",
   };
 
-  const instrBtn = {
-    x: width / 2,
-    y: 430,
-    w: 240,
-    h: 80,
-    label: "INSTRUCTIONS",
-  };
-
   // Draw both buttons
   drawButton(startBtn);
 
@@ -57,7 +49,6 @@ function drawStart() {
 function startMousePressed() {
   // For input checks, we only need x,y,w,h (label is optional)
   const startBtn = { x: width / 2, y: 320, w: 240, h: 80 };
-  const instrBtn = { x: width / 2, y: 430, w: 240, h: 80 };
 
   // If START is clicked, go to the game screen
   if (isHover(startBtn)) {
