@@ -27,19 +27,34 @@ const gameBtn = {
 // when currentScreen === "game"
 function drawGame() {
   // Set background colour for the game screen
-  background(240, 230, 140);
+  background(1, 68, 33);
 
   // ---- Title and instructions text ----
-  fill(0); // black text
+  fill(223, 238, 218); // light green text
   textSize(32);
   textAlign(CENTER, CENTER);
-  text("Game Screen", width / 2, 160);
+  text("The Magical Forest", width / 2, 160);
 
   textSize(18);
   text(
-    "Click the button (or press ENTER) for a random result.",
+    "Background: You are seeking to find a magical potion of healing for your sibling with an ailment.",
     width / 2,
     210,
+  );
+  text(
+    "You have heard whispers about a wizard in the forest who holds to ability to make such a potion,",
+    width / 2,
+    250,
+  );
+  text(
+    "and you decide to venture into the Magical Forest to search for him.",
+    width / 2,
+    290,
+  );
+  text(
+    "Instructions: Select one of three choices to progress the story.",
+    width / 2,
+    330,
   );
 
   // ---- Draw the button ----
