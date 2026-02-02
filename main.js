@@ -28,11 +28,11 @@ let currentScreen = "start"; // "start" | "instr" | "game" | "win" | "lose"
 // ------------------------------
 // This is where you usually set canvas size and initial settings.
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(windowWidth, 600);
 
   // Sets a default font for all text() calls
   // (This can be changed later per-screen if you want.)
-  textFont("sans-serif");
+  textFont("Times New Roman");
 }
 
 // ------------------------------
@@ -49,7 +49,6 @@ function draw() {
   //   lose.js          → drawLose()
 
   if (currentScreen === "start") drawStart();
-  else if (currentScreen === "instr") drawInstr();
   else if (currentScreen === "game") drawGame();
   else if (currentScreen === "win") drawWin();
   else if (currentScreen === "lose") drawLose();
@@ -74,7 +73,6 @@ function mousePressed() {
   // lose.js          → loseMousePressed()
 
   if (currentScreen === "start") startMousePressed();
-  else if (currentScreen === "instr") instrMousePressed();
   else if (currentScreen === "game") gameMousePressed();
   // The ?.() means “call this function only if it exists”
   // This prevents errors if a screen doesn’t implement a handler.
@@ -95,7 +93,6 @@ function keyPressed() {
   // lose.js          → loseKeyPressed()
 
   if (currentScreen === "start") startKeyPressed();
-  else if (currentScreen === "instr") instrKeyPressed();
   else if (currentScreen === "game") gameKeyPressed?.();
   else if (currentScreen === "win") winKeyPressed?.();
   else if (currentScreen === "lose") loseKeyPressed?.();

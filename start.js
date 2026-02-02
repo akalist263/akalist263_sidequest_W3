@@ -42,12 +42,11 @@ function drawStart() {
 
   // Draw both buttons
   drawButton(startBtn);
-  drawButton(instrBtn);
 
   // ---- Cursor feedback ----
   // If the mouse is over either button, show a hand cursor
   // so the player knows it is clickable.
-  const over = isHover(startBtn) || isHover(instrBtn);
+  const over = isHover(startBtn);
   cursor(over ? HAND : ARROW);
 }
 
@@ -64,10 +63,6 @@ function startMousePressed() {
   if (isHover(startBtn)) {
     currentScreen = "game";
   }
-  // If INSTRUCTIONS is clicked, go to the instructions screen
-  else if (isHover(instrBtn)) {
-    currentScreen = "instr";
-  }
 }
 
 // ------------------------------------------------------------
@@ -79,10 +74,6 @@ function startMousePressed() {
 function startKeyPressed() {
   if (keyCode === ENTER) {
     currentScreen = "game";
-  }
-
-  if (key === "i" || key === "I") {
-    currentScreen = "instr";
   }
 }
 
