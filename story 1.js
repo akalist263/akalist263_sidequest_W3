@@ -27,35 +27,62 @@ const gameBtn = {
 // when currentScreen === "game"
 function drawStory1() {
   // Set background colour for the game screen
-  background(0, 0, 0);
+  background(42, 111, 55);
 
-  // ---- Title and instructions text ----
+  // ---- Text ----
   fill(223, 238, 218); // light green text
-  textSize(32);
-  textAlign(CENTER, CENTER);
-  text("The Magical Forest", width / 2, 160);
 
   textSize(18);
   text(
-    "Background: You are seeking to find a magical potion of healing for your sibling with an ailment.",
+    "You begin your journey through the magical forest, only to discover, it is no journey at all.",
     width / 2,
-    210,
+    150,
   );
   text(
-    "You have heard whispers about a wizard in the forest who holds to ability to make such a potion,",
+    "You approach the path and, as you near, you realize that there are 3 paths.",
     width / 2,
-    250,
+    180,
+  );
+
+  // Option 1
+  fill(224, 169, 41); // Change text colour to Gold
+  text(
+    "The path to your left is littered with sticks, rocks, and a strange glowing dust. This is path number 1.",
+    width / 2,
+    230,
+  );
+
+  // Option 2
+  fill(237, 235, 215); // Change text colour to Eggshell
+  text(
+    "The path straight infront of you is covered with a thick fog, impossible to see through. The ground is",
+    width / 2,
+    260,
   );
   text(
-    "and you decide to venture into the Magical Forest to search for him.",
+    "made up of sharp, jagged rocks. This is path number 2.",
     width / 2,
-    290,
+    280,
   );
+
+  // Option 3
+  fill(109, 79, 54); // Change text colour to Gold
   text(
-    "Instructions: Select one of three choices to progress the story.",
+    "The path to your right is overgrown with thorn branches, making the route trecherous. This is path number 3.",
     width / 2,
-    330,
+    310,
   );
+
+  // Choice Text
+  fill(223, 238, 218); // Change colour back to light green text
+  textSize(22);
+  text("WHICH PATH WILL YOU PICK?", width / 2, 350);
+
+  // Draw Buttons below
+
+  // Path 1 Button --> lose -- the gold powder kills you
+  // Path 2 Button --> lose -- The fog chokes you
+  // Path 3 Button --> WIN!
 
   // ---- Draw the button ----
   // We pass the button object to a helper function
