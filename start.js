@@ -62,11 +62,6 @@ function startMousePressed() {
 // Provides keyboard shortcuts:
 // - ENTER starts the game
 // - I opens instructions
-function startKeyPressed() {
-  if (keyCode === ENTER) {
-    currentScreen = "game";
-  }
-}
 
 // ------------------------------------------------------------
 // Helper: drawButton()

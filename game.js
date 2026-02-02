@@ -13,7 +13,7 @@
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
 const gameBtn = {
-  x: width / 2, // x position (centre of the button)
+  x: 200, // x position (centre of the button)
   y: 500, // y position (centre of the button)
   w: 260, // width
   h: 90, // height
