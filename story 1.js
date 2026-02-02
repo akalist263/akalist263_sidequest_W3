@@ -25,9 +25,9 @@ const gameBtn = {
 // ------------------------------
 // drawGame() is called from main.js *only*
 // when currentScreen === "game"
-function drawGame() {
+function drawStory1() {
   // Set background colour for the game screen
-  background(1, 68, 33);
+  background(0, 0, 0);
 
   // ---- Title and instructions text ----
   fill(223, 238, 218); // light green text
