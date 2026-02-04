@@ -45,15 +45,17 @@ function draw() {
   //   start.js    → drawStart()
   //   game.js     → drawGame()
   //   story_1.js  → drawStory1()
-  //   win.js      → drawWin()
-  //   lose.js     → drawLose()
+  //   Path1.js    -> drawPath1()
+  //   Path2.js    -> drawPath2()
+  //   Path3.js    -> drawPath3()
 
   if (currentScreen === "start") drawStart();
   else if (currentScreen === "game") drawGame();
   else if (currentScreen === "story1")
     drawStory1(); // ADDED: story1 routing
-  else if (currentScreen === "win") drawWin();
-  else if (currentScreen === "lose") drawLose();
+  else if (currentScreen === "Path1") drawPath1();
+  else if (currentScreen === "Path2") drawPath2();
+  else if (currentScreen === "Path3") drawPath3();
 
   // (Optional teaching note)
   // This "if/else chain" is a very common early approach.
