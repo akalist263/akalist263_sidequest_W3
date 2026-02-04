@@ -31,30 +31,41 @@ function drawStory1() {
 
   // ---- Title and instructions text ----
   fill(223, 238, 218); // light green text
-  textSize(32);
   textAlign(CENTER, CENTER);
 
   textSize(18);
   text(
-    "Background: You are seeking to find a magical potion of healing for your sibling with an ailment.",
+    "You approach the forest to begin your journey, only to realize, this is no journey at all.",
     width / 2,
     210,
   );
   text(
-    "You have heard whispers about a wizard in the forest who holds to ability to make such a potion,",
+    "You find the path, but see that it branches off into three separate paths.",
     width / 2,
     250,
   );
+  fill(255, 218, 34); //change text to gold
   text(
-    "and you decide to venture into the Magical Forest to search for him.",
+    "The path to your left is littered with twigs and rocks, and some strange glowing powder. This is path #1.",
     width / 2,
-    290,
+    280,
   );
+  fill(246, 247, 235); //change text to ivory
   text(
-    "Instructions: Select one of three choices to progress the story.",
+    "The path immediately infront of you is covered with a thick fog, unable to see through, and the ground is covered with jagged rocks. This is path #2.",
     width / 2,
     330,
   );
+  fill(151, 96, 32); //change text to ivory
+  text(
+    "The path to your right is covered with thick, thorned branches. This is path #3.",
+    width / 2,
+    310,
+  );
+
+  textSize(22);
+  fill(223, 238, 218); //change text to back to light
+  text("Which path do you venture down?", width / 2, 350);
 
   // ---- Draw the button ----
   // We pass the button object to a helper function
