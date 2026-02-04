@@ -90,12 +90,19 @@ function drawStory1() {
 
   // ---- Draw the button ----
   // We pass the button object to a helper function
-  drawStory1Button(Story1Btn); /////////////////////////////// Problems here and cursor hover
+  drawStory1Button(Story1Btn1); /////////////////////////////// Problems here and cursor hover
 
   // ---- Cursor feedback ----
   // If the mouse is over the button, show a hand cursor
   // Otherwise, show the normal arrow cursor
-  cursor(isHover(Story1Btn) ? HAND : ARROW);
+  cursor(isHover(Story1Btn1) ? HAND : ARROW);
+
+  drawStory1Button(Story1Btn2); /////////////////////////////// Problems here and cursor hover
+
+  // ---- Cursor feedback ----
+  // If the mouse is over the button, show a hand cursor
+  // Otherwise, show the normal arrow cursor
+  cursor(isHover(Story1Btn2) ? HAND : ARROW);
 }
 
 // ------------------------------
@@ -138,12 +145,16 @@ function drawStory1Button({ x, y, w, h, label }) {
 // only when currentScreen === "story1"
 function Story1MousePressed() {
   // Only trigger the outcome if the button is clicked
-  if (isHover(Story1Btn)) {
+  if (isHover(Story1Btn1)) {
     // CHANGE THIS to go to wherever you want!
     // For now, going to win screen as an example
-    currentScreen = "win"; ///////////////////////////////////// Need to update (+ make 2 more)
+    currentScreen = "Path1"; ///////////////////////////////////// Need to update (+ make 2 more)
 
     // You might want to go to a different story screen instead:
     // currentScreen = "story2";
+  } else if (isHover(Story1Btn2)) {
+    currentScreen = "Path2";
+  } else if (isHover(Story1Btn3)) {
+    currentScreen = "Path3";
   }
 }
