@@ -28,7 +28,7 @@
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
 const Path3Btn = {
-  x: windowWidth / 2, // x position (centre of the button)
+  x: 650, // x position (centre of the button)
   y: 500, // y position (centre of the button)
   w: 260, // width
   h: 90, // height
@@ -42,19 +42,19 @@ const Path3Btn = {
 // when currentScreen === "game"
 function drawPath3() {
   // Set background colour for the game screen
-  background(19, 11, 99); // Set green Background
+  background(105, 143, 63); // Set sage green Background
 
   // ---- Text ----
   fill(255, 255, 255); // white text
 
-  textSize(45);
-  text("YOU WIN!", width / 2, 200);
+  textSize(65);
+  text("YOU WIN!", width / 2, 110);
   textSize(20);
-  text("You chose path #3.", width / 2, 245);
+  text("You chose path #3.", width / 2, 200);
   text(
     "You selected the right path! You venture onto the path, and discover that ",
     width / 2,
-    265,
+    245,
   );
   text(
     "the thorn branches blocking your way were an illusion, cast by the wizard to protect himself.",
@@ -64,11 +64,11 @@ function drawPath3() {
   text(
     "You quickly approach the wizard's house, and he agrees to help you for your bravery and cleverness.",
     width / 2,
-    305,
+    325,
   );
 
   textSize(30);
-  text("Congratulations!", width / 2, 345);
+  text("Congratulations!", width / 2, 395);
 
   // Draw Buttons below
 
