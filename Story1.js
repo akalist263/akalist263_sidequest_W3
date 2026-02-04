@@ -90,7 +90,7 @@ function drawStory1() {
 
   // ---- Draw the button ----
   // We pass the button object to a helper function
-  drawStory1Button(Story1Btn);
+  drawStory1Button(Story1Btn); //// Problems here and cursor hover
 
   // ---- Cursor feedback ----
   // If the mouse is over the button, show a hand cursor
@@ -104,6 +104,7 @@ function drawStory1() {
 // This function is responsible *only* for drawing the button.
 // It does NOT handle clicks or game logic.
 function drawStory1Button({ x, y, w, h, label }) {
+  //////// Problems here -- do I make multiple of these?
   rectMode(CENTER);
 
   // Check if the mouse is hovering over the button
@@ -140,7 +141,7 @@ function Story1MousePressed() {
   if (isHover(Story1Btn)) {
     // CHANGE THIS to go to wherever you want!
     // For now, going to win screen as an example
-    currentScreen = "win";
+    currentScreen = "win"; //////// Need to update (+ make 2 more)
 
     // You might want to go to a different story screen instead:
     // currentScreen = "story2";
