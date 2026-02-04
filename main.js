@@ -51,8 +51,8 @@ function draw() {
 
   if (currentScreen === "start") drawStart();
   else if (currentScreen === "game") drawGame();
-  else if (currentScreen === "story1")
-    drawStory1(); // ADDED: story1 routing
+  else if (currentScreen === "Story1")
+    drawStory1(); // ADDED: Story1 routing
   else if (currentScreen === "Path1") drawPath1();
   else if (currentScreen === "Path2") drawPath2();
   else if (currentScreen === "Path3") drawPath3();
@@ -78,12 +78,13 @@ function mousePressed() {
 
   if (currentScreen === "start") startMousePressed();
   else if (currentScreen === "game") gameMousePressed();
-  else if (currentScreen === "story1")
-    story1MousePressed(); // ADDED: story1 mouse input
+  else if (currentScreen === "Story1")
+    Story1MousePressed(); // ADDED: Story1 mouse input
   // The ?.() means "call this function only if it exists"
   // This prevents errors if a screen doesn't implement a handler.
-  else if (currentScreen === "win") winMousePressed?.();
-  else if (currentScreen === "lose") loseMousePressed?.();
+  else if (currentScreen === "Path1") Path1MousePressed?.();
+  else if (currentScreen === "Path2") Path2MousePressed?.();
+  else if (currentScreen === "Path3") Path3MousePressed?.();
 }
 
 // ------------------------------
@@ -100,10 +101,11 @@ function keyPressed() {
 
   if (currentScreen === "start") startKeyPressed?.();
   else if (currentScreen === "game") gameKeyPressed?.();
-  else if (currentScreen === "story1")
-    story1KeyPressed?.(); // ADDED: story1 keyboard input
-  else if (currentScreen === "win") winKeyPressed?.();
-  else if (currentScreen === "lose") loseKeyPressed?.();
+  else if (currentScreen === "Story1")
+    Story1KeyPressed?.(); // ADDED: Story1 keyboard input
+  else if (currentScreen === "Path1") Path1KeyPressed?.();
+  else if (currentScreen === "Path2") Path2KeyPressed?.();
+  else if (currentScreen === "Path3") Path3KeyPressed?.();
 }
 
 // ------------------------------------------------------------
