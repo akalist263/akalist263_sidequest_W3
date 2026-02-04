@@ -1,7 +1,7 @@
 // NOTE: Do NOT add setup() or draw() in this file
 // setup() and draw() live in main.js
 // This file only defines:
-// 1) drawGame() → what the game screen looks like
+// 1) drawStory1() → what the story 1 screen looks like
 // 2) input handlers → what happens when the player clicks or presses keys
 // 3) helper functions specific to this screen
 
@@ -9,10 +9,10 @@
 // Button data
 // ------------------------------
 // This object stores all the information needed to draw
-// and interact with the button on the game screen.
+// and interact with the button on the story 1 screen.
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
-const gameBtn = {
+const story1Btn = {
   x: 200, // x position (centre of the button)
   y: 500, // y position (centre of the button)
   w: 260, // width
@@ -23,75 +23,48 @@ const gameBtn = {
 // ------------------------------
 // Main draw function for this screen
 // ------------------------------
-// drawGame() is called from main.js *only*
-// when currentScreen === "game"
+// drawStory1() is called from main.js *only*
+// when currentScreen === "story1"
 function drawStory1() {
-  // Set background colour for the game screen
-  background(42, 111, 55);
+  // Set background colour for the story 1 screen
+  background(0, 0, 0);
 
-  // ---- Text ----
+  // ---- Title and instructions text ----
   fill(223, 238, 218); // light green text
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("The Magical Forest", width / 2, 160);
 
   textSize(18);
   text(
-    "You begin your journey through the magical forest, only to discover, it is no journey at all.",
+    "Background: You are seeking to find a magical potion of healing for your sibling with an ailment.",
     width / 2,
-    150,
+    210,
   );
   text(
-    "You approach the path and, as you near, you realize that there are 3 paths.",
+    "You have heard whispers about a wizard in the forest who holds to ability to make such a potion,",
     width / 2,
-    180,
-  );
-
-  // Option 1
-  fill(224, 169, 41); // Change text colour to Gold
-  text(
-    "The path to your left is littered with sticks, rocks, and a strange glowing dust. This is path number 1.",
-    width / 2,
-    230,
-  );
-
-  // Option 2
-  fill(237, 235, 215); // Change text colour to Eggshell
-  text(
-    "The path straight infront of you is covered with a thick fog, impossible to see through. The ground is",
-    width / 2,
-    260,
+    250,
   );
   text(
-    "made up of sharp, jagged rocks. This is path number 2.",
+    "and you decide to venture into the Magical Forest to search for him.",
     width / 2,
-    280,
+    290,
   );
-
-  // Option 3
-  fill(109, 79, 54); // Change text colour to Gold
   text(
-    "The path to your right is overgrown with thorn branches, making the route trecherous. This is path number 3.",
+    "Instructions: Select one of three choices to progress the story.",
     width / 2,
-    310,
+    330,
   );
-
-  // Choice Text
-  fill(223, 238, 218); // Change colour back to light green text
-  textSize(22);
-  text("WHICH PATH WILL YOU PICK?", width / 2, 350);
-
-  // Draw Buttons below
-
-  // Path 1 Button --> lose -- the gold powder kills you
-  // Path 2 Button --> lose -- The fog chokes you
-  // Path 3 Button --> WIN!
 
   // ---- Draw the button ----
   // We pass the button object to a helper function
-  drawGameButton(gameBtn);
+  drawStory1Button(story1Btn);
 
   // ---- Cursor feedback ----
   // If the mouse is over the button, show a hand cursor
   // Otherwise, show the normal arrow cursor
-  cursor(isHover(gameBtn) ? HAND : ARROW);
+  cursor(isHover(story1Btn) ? HAND : ARROW);
 }
 
 // ------------------------------
@@ -99,7 +72,7 @@ function drawStory1() {
 // ------------------------------
 // This function is responsible *only* for drawing the button.
 // It does NOT handle clicks or game logic.
-function drawGameButton({ x, y, w, h, label }) {
+function drawStory1Button({ x, y, w, h, label }) {
   rectMode(CENTER);
 
   // Check if the mouse is hovering over the button
@@ -130,10 +103,15 @@ function drawGameButton({ x, y, w, h, label }) {
 // Mouse input for this screen
 // ------------------------------
 // This function is called from main.js
-// only when currentScreen === "story 1"
-function gameMousePressed() {
+// only when currentScreen === "story1"
+function story1MousePressed() {
   // Only trigger the outcome if the button is clicked
-  if (isHover(gameBtn)) {
-    currentScreen = "story 1";
+  if (isHover(story1Btn)) {
+    // CHANGE THIS to go to wherever you want!
+    // For now, going to win screen as an example
+    currentScreen = "win";
+
+    // You might want to go to a different story screen instead:
+    // currentScreen = "story2";
   }
 }
