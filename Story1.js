@@ -33,7 +33,6 @@ function drawStory1() {
   fill(223, 238, 218); // light green text
   textSize(32);
   textAlign(CENTER, CENTER);
-  text("The Magical Forest", width / 2, 160);
 
   textSize(18);
   text(

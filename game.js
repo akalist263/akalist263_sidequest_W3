@@ -108,6 +108,6 @@ function gameMousePressed() {
   // Only trigger the outcome if the button is clicked
   if (isHover(gameBtn)) {
     // FIXED: Now goes to story1 screen (note: lowercase and consistent naming)
-    currentScreen = "story1";
+    currentScreen = "Story1";
   }
 }
