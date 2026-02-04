@@ -134,15 +134,15 @@ function drawStory1Button({ x, y, w, h, label }) {
   // This gives visual feedback to the player
   fill(
     hover
-      ? color(180, 220, 255, 220) // lighter blue on hover
-      : color(200, 220, 255, 190), // normal state
+      ? color(222, 209, 186, 220) // lighter blue on hover
+      : color(231, 222, 205, 255), // normal state
   );
 
   // Draw the button rectangle
   rect(x, y, w, h, 14); // last value = rounded corners
 
   // Draw the button text
-  fill(0);
+  fill(128, 78, 73);
   textSize(28);
   textAlign(CENTER, CENTER);
   text(label, x, y);
