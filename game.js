@@ -103,10 +103,11 @@ function drawGameButton({ x, y, w, h, label }) {
 // Mouse input for this screen
 // ------------------------------
 // This function is called from main.js
-// only when currentScreen === "Story1"
-function mousePressed() {
+// only when currentScreen === "game"
+function gameMousePressed() {
   // Only trigger the outcome if the button is clicked
   if (isHover(gameBtn)) {
-    currentScreen = "Story1";
+    // FIXED: Now goes to story1 screen (note: lowercase and consistent naming)
+    currentScreen = "story1";
   }
 }
