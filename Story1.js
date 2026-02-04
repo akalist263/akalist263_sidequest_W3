@@ -12,8 +12,8 @@
 // and interact with the button on the story 1 screen.
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
-// ------------------------------------------------------- Need help with the multiple buttons
-// ------------------------------------------------------- calling the functions at the bottom
+/////////////////// ------------------------------------------------------- Need help with the multiple buttons
+/////////////////// ------------------------------------------------------- calling the functions at the bottom
 // Path 1 Button
 const Story1Btn1 = {
   x: 200, // x position (centre of the button)
@@ -77,7 +77,7 @@ function drawStory1() {
     width / 2,
     330,
   );
-  fill(151, 96, 32); //change text to ivory
+  fill(151, 96, 32); //change text to brown
   text(
     "The path to your right is covered with thick, thorned branches. This is path #3.",
     width / 2,
@@ -90,7 +90,7 @@ function drawStory1() {
 
   // ---- Draw the button ----
   // We pass the button object to a helper function
-  drawStory1Button(Story1Btn); //// Problems here and cursor hover
+  drawStory1Button(Story1Btn); /////////////////////////////// Problems here and cursor hover
 
   // ---- Cursor feedback ----
   // If the mouse is over the button, show a hand cursor
@@ -141,7 +141,7 @@ function Story1MousePressed() {
   if (isHover(Story1Btn)) {
     // CHANGE THIS to go to wherever you want!
     // For now, going to win screen as an example
-    currentScreen = "win"; //////// Need to update (+ make 2 more)
+    currentScreen = "win"; ///////////////////////////////////// Need to update (+ make 2 more)
 
     // You might want to go to a different story screen instead:
     // currentScreen = "story2";
