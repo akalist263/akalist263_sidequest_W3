@@ -28,7 +28,7 @@
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
 const Path2Btn = {
-  x: windowWidth / 2, // x position (centre of the button)
+  x: 650, // x position (centre of the button)
   y: 500, // y position (centre of the button)
   w: 260, // width
   h: 90, // height
@@ -42,19 +42,19 @@ const Path2Btn = {
 // when currentScreen === "game"
 function drawPath2() {
   // Set background colour for the game screen
-  background(208, 0, 0); // Set Red Background
+  background(122, 1, 1); // Set Red Background
 
   // ---- Text ----
   fill(255, 255, 255); // white text
 
-  textSize(45);
-  text("YOU LOST!", width / 2, 200);
+  textSize(65);
+  text("YOU LOST!", width / 2, 110);
   textSize(20);
   text("You chose path #2.", width / 2, 245);
   text(
     "The fog on the path is so thick and you are no longer able to breathe. You collapse on the path, never to wake again.",
     width / 2,
-    265,
+    285,
   );
 
   // Draw Buttons below
@@ -90,7 +90,7 @@ function drawPath2Button({ x, y, w, h, label }) {
   fill(
     hover
       ? color(180, 220, 255, 220) // lighter blue on hover
-      : color(200, 220, 255, 190), // normal state
+      : color(200, 220, 255, 255), // normal state
   );
 
   // Draw the button rectangle

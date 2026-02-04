@@ -28,7 +28,7 @@
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
 const Path1Btn = {
-  x: windowWidth / 2, // x position (centre of the button)
+  x: 650, // x position (centre of the button)
   y: 500, // y position (centre of the button)
   w: 260, // width
   h: 90, // height
@@ -42,19 +42,19 @@ const Path1Btn = {
 // when currentScreen === "game"
 function drawPath1() {
   // Set background colour for the game screen
-  background(208, 0, 0); // Set Red Background
+  background(122, 1, 1); // Set Red Background
 
   // ---- Text ----
   fill(255, 255, 255); // white text
 
-  textSize(45);
-  text("YOU LOST!", width / 2, 200);
+  textSize(65);
+  text("YOU LOST!", width / 2, 110);
   textSize(20);
   text("You chose path #1.", width / 2, 245);
   text(
     "The gold powder on the ground is enchanted fairy dust. Once you enhaled it, you fell into a deep, eternal slumber.",
     width / 2,
-    265,
+    295,
   );
 
   // Draw Buttons below
@@ -90,7 +90,7 @@ function drawPath1Button({ x, y, w, h, label }) {
   fill(
     hover
       ? color(180, 220, 255, 220) // lighter blue on hover
-      : color(200, 220, 255, 190), // normal state
+      : color(200, 220, 255, 255), // normal state
   );
 
   // Draw the button rectangle
