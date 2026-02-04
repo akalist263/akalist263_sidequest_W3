@@ -1,5 +1,5 @@
 // ------------------------------------------------------------
-// main.js = the “router” (traffic controller) for the whole game
+// main.js = the "router" (traffic controller) for the whole game
 // ------------------------------------------------------------
 //
 // Idea: this project has multiple screens (start, instructions, game, win, lose).
@@ -19,9 +19,9 @@
 // This variable is shared across all files because all files run in the same
 // global JavaScript scope when loaded in index.html.
 //
-// We store the “name” of the current screen as a string.
+// We store the "name" of the current screen as a string.
 // Only one screen should be active at a time.
-let currentScreen = "start"; // "start" | "instr" | "game" | "win" | "lose"
+let currentScreen = "start"; // "start" | "game" | "story1" | "win" | "lose"
 
 // ------------------------------
 // setup() runs ONCE at the beginning
@@ -38,23 +38,25 @@ function setup() {
 // ------------------------------
 // draw() runs every frame (many times per second)
 // ------------------------------
-// This is the core “router” for visuals.
+// This is the core "router" for visuals.
 // Depending on currentScreen, we call the correct draw function.
 function draw() {
   // Each screen file defines its own draw function:
-  //   start.js         → drawStart()
-  //   instructions.js  → drawInstr()
-  //   game.js          → drawGame()
-  //   win.js           → drawWin()
-  //   lose.js          → drawLose()
+  //   start.js    → drawStart()
+  //   game.js     → drawGame()
+  //   story_1.js  → drawStory1()
+  //   win.js      → drawWin()
+  //   lose.js     → drawLose()
 
   if (currentScreen === "start") drawStart();
   else if (currentScreen === "game") drawGame();
+  else if (currentScreen === "story1")
+    drawStory1(); // ADDED: story1 routing
   else if (currentScreen === "win") drawWin();
   else if (currentScreen === "lose") drawLose();
 
   // (Optional teaching note)
-  // This “if/else chain” is a very common early approach.
+  // This "if/else chain" is a very common early approach.
   // Later in the course you might replace it with:
   // - a switch statement, or
   // - an object/map of screens
@@ -66,16 +68,18 @@ function draw() {
 // This routes mouse input to the correct screen handler.
 function mousePressed() {
   // Each screen *may* define a mouse handler:
-  // start.js         → startMousePressed()
-  // instructions.js  → instrMousePressed()
-  // game.js          → gameMousePressed()
-  // win.js           → winMousePressed()
-  // lose.js          → loseMousePressed()
+  // start.js    → startMousePressed()
+  // game.js     → gameMousePressed()
+  // story_1.js  → story1MousePressed()
+  // win.js      → winMousePressed()
+  // lose.js     → loseMousePressed()
 
   if (currentScreen === "start") startMousePressed();
   else if (currentScreen === "game") gameMousePressed();
-  // The ?.() means “call this function only if it exists”
-  // This prevents errors if a screen doesn’t implement a handler.
+  else if (currentScreen === "story1")
+    story1MousePressed(); // ADDED: story1 mouse input
+  // The ?.() means "call this function only if it exists"
+  // This prevents errors if a screen doesn't implement a handler.
   else if (currentScreen === "win") winMousePressed?.();
   else if (currentScreen === "lose") loseMousePressed?.();
 }
@@ -86,14 +90,16 @@ function mousePressed() {
 // This routes keyboard input to the correct screen handler.
 function keyPressed() {
   // Each screen *may* define a key handler:
-  // start.js         → startKeyPressed()
-  // instructions.js  → instrKeyPressed()
-  // game.js          → gameKeyPressed()
-  // win.js           → winKeyPressed()
-  // lose.js          → loseKeyPressed()
+  // start.js    → startKeyPressed()
+  // game.js     → gameKeyPressed()
+  // story_1.js  → story1KeyPressed()
+  // win.js      → winKeyPressed()
+  // lose.js     → loseKeyPressed()
 
-  if (currentScreen === "start") startKeyPressed();
+  if (currentScreen === "start") startKeyPressed?.();
   else if (currentScreen === "game") gameKeyPressed?.();
+  else if (currentScreen === "story1")
+    story1KeyPressed?.(); // ADDED: story1 keyboard input
   else if (currentScreen === "win") winKeyPressed?.();
   else if (currentScreen === "lose") loseKeyPressed?.();
 }
