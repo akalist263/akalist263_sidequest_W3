@@ -12,7 +12,7 @@
 // and interact with the button on the story 1 screen.
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
-const story1Btn = {
+const Story1Btn = {
   x: 200, // x position (centre of the button)
   y: 500, // y position (centre of the button)
   w: 260, // width
@@ -59,12 +59,12 @@ function drawStory1() {
 
   // ---- Draw the button ----
   // We pass the button object to a helper function
-  drawStory1Button(story1Btn);
+  drawStory1Button(Story1Btn);
 
   // ---- Cursor feedback ----
   // If the mouse is over the button, show a hand cursor
   // Otherwise, show the normal arrow cursor
-  cursor(isHover(story1Btn) ? HAND : ARROW);
+  cursor(isHover(Story1Btn) ? HAND : ARROW);
 }
 
 // ------------------------------
@@ -104,9 +104,9 @@ function drawStory1Button({ x, y, w, h, label }) {
 // ------------------------------
 // This function is called from main.js
 // only when currentScreen === "story1"
-function story1MousePressed() {
+function Story1MousePressed() {
   // Only trigger the outcome if the button is clicked
-  if (isHover(story1Btn)) {
+  if (isHover(Story1Btn)) {
     // CHANGE THIS to go to wherever you want!
     // For now, going to win screen as an example
     currentScreen = "win";
