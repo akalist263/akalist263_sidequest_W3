@@ -12,12 +12,33 @@
 // and interact with the button on the story 1 screen.
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
-const Story1Btn = {
+// ------------------------------------------------------- Need help with the multiple buttons
+// ------------------------------------------------------- calling the functions at the bottom
+// Path 1 Button
+const Story1Btn1 = {
   x: 200, // x position (centre of the button)
   y: 500, // y position (centre of the button)
   w: 260, // width
   h: 90, // height
-  label: "Press to Begin", // text shown on the button
+  label: "Path 1", // text shown on the button
+};
+
+// Path 2 Button
+const Story1Btn2 = {
+  x: windowWidth / 2, // x position (centre of the button)
+  y: 500, // y position (centre of the button)
+  w: 260, // width
+  h: 90, // height
+  label: "Path 2", // text shown on the button
+};
+
+// Path 3 Button
+const Story1Btn3 = {
+  x: 800, // x position (centre of the button)
+  y: 500, // y position (centre of the button)
+  w: 260, // width
+  h: 90, // height
+  label: "Path 3", // text shown on the button
 };
 
 // ------------------------------

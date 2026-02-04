@@ -27,12 +27,12 @@
 // and interact with the button on the game screen.
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
-const gameBtn = {
-  x: 200, // x position (centre of the button)
+const Path3Btn = {
+  x: windowWidth / 2, // x position (centre of the button)
   y: 500, // y position (centre of the button)
   w: 260, // width
   h: 90, // height
-  label: "Press to Begin", // text shown on the button
+  label: "Play Again", // text shown on the button
 };
 
 // ------------------------------
@@ -76,12 +76,12 @@ function drawPath3() {
 
   // ---- Draw the button ----
   // We pass the button object to a helper function
-  drawGameButton(gameBtn);
+  drawPath3Button(Path3Btn);
 
   // ---- Cursor feedback ----
   // If the mouse is over the button, show a hand cursor
   // Otherwise, show the normal arrow cursor
-  cursor(isHover(gameBtn) ? HAND : ARROW);
+  cursor(isHover(Path3Btn) ? HAND : ARROW);
 }
 
 // ------------------------------
@@ -89,7 +89,7 @@ function drawPath3() {
 // ------------------------------
 // This function is responsible *only* for drawing the button.
 // It does NOT handle clicks or game logic.
-function drawGameButton({ x, y, w, h, label }) {
+function drawPath3Button({ x, y, w, h, label }) {
   rectMode(CENTER);
 
   // Check if the mouse is hovering over the button
@@ -121,9 +121,9 @@ function drawGameButton({ x, y, w, h, label }) {
 // ------------------------------
 // This function is called from main.js
 // only when currentScreen === "story 1"
-function gameMousePressed() {
+function Path3MousePressed() {
   // Only trigger the outcome if the button is clicked
-  if (isHover(gameBtn)) {
-    currentScreen = "story 1";
+  if (isHover(Path3Btn)) {
+    currentScreen = "start";
   }
 }
