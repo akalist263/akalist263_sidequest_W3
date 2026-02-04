@@ -25,7 +25,7 @@ const Story1Btn1 = {
 
 // Path 2 Button
 const Story1Btn2 = {
-  x: windowWidth / 2, // x position (centre of the button)
+  x: 650, // x position (centre of the button)
   y: 500, // y position (centre of the button)
   w: 260, // width
   h: 90, // height
@@ -103,6 +103,13 @@ function drawStory1() {
   // If the mouse is over the button, show a hand cursor
   // Otherwise, show the normal arrow cursor
   cursor(isHover(Story1Btn2) ? HAND : ARROW);
+
+  drawStory1Button(Story1Btn3); /////////////////////////////// Problems here and cursor hover
+
+  // ---- Cursor feedback ----
+  // If the mouse is over the button, show a hand cursor
+  // Otherwise, show the normal arrow cursor
+  cursor(isHover(Story1Btn3) ? HAND : ARROW);
 }
 
 // ------------------------------
@@ -148,10 +155,7 @@ function Story1MousePressed() {
   if (isHover(Story1Btn1)) {
     // CHANGE THIS to go to wherever you want!
     // For now, going to win screen as an example
-    currentScreen = "Path1"; ///////////////////////////////////// Need to update (+ make 2 more)
-
-    // You might want to go to a different story screen instead:
-    // currentScreen = "story2";
+    currentScreen = "Path1";
   } else if (isHover(Story1Btn2)) {
     currentScreen = "Path2";
   } else if (isHover(Story1Btn3)) {
